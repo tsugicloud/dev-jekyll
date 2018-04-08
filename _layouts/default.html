@@ -3,7 +3,12 @@
     {% include head.html %}
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     {% include nav.html %}
+    {% if page.slider %}
+      {% include slider.html height="50" unit="%" transition="slide" duration="7" %}
+    {% else %}
     {% include header.html %}
+    {% endif %}
+    <!-- https://jekyllcodex.org/without-plugin/slider/ -->
     {% include about.html %}
     {% include footer.html %}
     {% include js.html %}
